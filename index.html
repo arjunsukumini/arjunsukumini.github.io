@@ -27,38 +27,104 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            foliage: {
-              50: '#f4f7f4',
-              100: '#e3ebe3',
-              600: '#3d6342',
-              700: '#2f4e33',
-              800: '#253d28',
-              900: '#1c2f1f',
-            }
-          }
-        }
-      }
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-  </script>
+    ::selection {
+      background-color: #e3ebe3;
+      color: #2f4e33;
+    }
+    body {
+      min-height: 100vh;
+      background-color: #ffffff;
+      color: #253d28;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.25rem;
+    }
+    main {
+      width: 100%;
+      max-width: 28rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .avatar {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 9999px;
+      object-fit: cover;
+      border: 4px solid #f4f7f4;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      color: #1c2f1f;
+    }
+    .bio {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: #3d6342;
+      margin-top: 0.25rem;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+      width: 100%;
+    }
+    .btn {
+      flex: 1;
+      max-width: 140px;
+      padding: 0.625rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.15s ease;
+    }
+    .btn-primary {
+      background-color: #2f4e33;
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background-color: #253d28;
+    }
+    .btn-secondary {
+      background-color: #f4f7f4;
+      color: #253d28;
+      border: 1px solid #e3ebe3;
+    }
+    .btn-secondary:hover {
+      background-color: #e3ebe3;
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-white text-foliage-800 font-sans antialiased flex flex-col items-center justify-center px-5 py-16 selection:bg-foliage-100 selection:text-foliage-700">
-  <main class="w-full max-w-md flex flex-col items-center text-center">
-    <img src="avatar.jpg" alt="Arjun S M" class="w-32 h-32 rounded-full object-cover shadow-sm ring-4 ring-foliage-50 mb-6" />
-    
-    <h1 class="text-2xl font-semibold tracking-tight text-foliage-900">Arjun S M</h1>
-    <p class="text-sm text-foliage-600 mt-1">Based in Kozhikode, India.</p>
-
-    <div class="flex items-center justify-center gap-3 mt-7 w-full">
-      <a href="https://github.com/arjunsukumini" target="_blank" rel="noopener noreferrer" class="flex-1 max-w-[140px] py-2.5 px-4 rounded-xl bg-foliage-700 text-white text-sm font-medium hover:bg-foliage-800 transition-colors">
+<body>
+  <main>
+    <img src="avatar.jpg" alt="Arjun S M" class="avatar" />
+    <h1>Arjun S M</h1>
+    <p class="bio">Based in Kozhikode, India.</p>
+    <div class="links">
+      <a href="https://github.com/arjunsukumini" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
         GitHub
       </a>
-      <a href="https://www.instagram.com/arjunnnsm/" target="_blank" rel="noopener noreferrer" class="flex-1 max-w-[140px] py-2.5 px-4 rounded-xl border border-foliage-100 bg-foliage-50 text-foliage-800 text-sm font-medium hover:bg-foliage-100 transition-colors">
+      <a href="https://www.instagram.com/arjunnnsm/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
         Instagram
       </a>
     </div>
