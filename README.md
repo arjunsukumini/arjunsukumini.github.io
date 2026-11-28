@@ -8,4 +8,4 @@ Personal landing page and portfolio for **Arjun S M** (`@arjunsukumini`), based 
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+All Rights Reserved — see [LICENSE](LICENSE).
